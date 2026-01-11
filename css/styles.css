@@ -566,8 +566,12 @@ img {
   margin-bottom: 8px;
 }
 
-.form-field-comment {
+.form-field-textarea {
   margin-bottom: 16px;
+}
+
+.form-field-agreement {
+  margin-bottom: 24px;
 }
 
 .form-label {

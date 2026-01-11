@@ -518,28 +518,25 @@
 
     <div class="backdrop" data-modal>
       <div class="modal">
-        <button
-          type="button"
-          class="button-modal"
-          aria-label="close modal button"
-          data-modal-close
-        >
+        <button type="button" class="button-modal" data-modal-close>
           <svg class="svg-modal" width="8" height="8">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
+
         <p class="paragraph-modal">
           Leave your contacts and we will call you back
         </p>
-        <form>
-          <div class="form-field form-field-comment">
+
+        <form class="modal-form">
+          <div class="form-field">
             <label class="form-label" for="user-name">Name</label>
             <div class="input-wrapper">
               <input
                 class="form-input"
+                type="text"
                 name="user-name"
                 id="user-name"
-                type="text"
               />
               <svg class="form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-person-user"></use>
@@ -548,13 +545,13 @@
           </div>
 
           <div class="form-field">
-            <label class="form-label" for="input-phone">Phone</label>
+            <label class="form-label" for="user-phone">Phone</label>
             <div class="input-wrapper">
               <input
                 class="form-input"
-                name="input-phone"
-                id="input-phone"
-                type="text"
+                type="tel"
+                name="user-phone"
+                id="user-phone"
               />
               <svg class="form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-phone-black"></use>
@@ -563,20 +560,21 @@
           </div>
 
           <div class="form-field">
-            <label class="form-label" for="input-email">Email</label>
+            <label class="form-label" for="user-email">Email</label>
             <div class="input-wrapper">
               <input
                 class="form-input"
-                name="input-email"
-                id="input-email"
-                type="text"
+                type="email"
+                name="user-email"
+                id="user-email"
               />
               <svg class="form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email-black"></use>
               </svg>
             </div>
           </div>
-          <div class="form-field">
+
+          <div class="form-field-textarea">
             <label class="form-label" for="user-comment">Comment</label>
             <textarea
               class="user-comment"
@@ -586,14 +584,13 @@
             ></textarea>
           </div>
 
-          <div class="form-field">
+          <div class="form-field-agreement">
             <input
               class="visually-hidden"
               type="checkbox"
               name="user-privacy"
               id="user-privacy"
               value="true"
-              checked
             />
             <label class="modal-form-agreement" for="user-privacy">
               <span class="modal-form-agreement-checkbox">
@@ -602,10 +599,11 @@
                 </svg>
               </span>
               I accept the terms and conditions of the
-              <a class="modal-form-agreement-link">Privacy Policy</a>
+              <a class="modal-form-agreement-link" href="#">Privacy Policy</a>
             </label>
           </div>
-          <button type="button" class="button button-accent">Send</button>
+
+          <button type="submit" class="button-accent">Send</button>
         </form>
       </div>
     </div>
